@@ -1,7 +1,15 @@
 package com.mkodo.romannumerals
 
 class RomanNumerals {
-    private val numerals = mapOf(100 to "C", 50 to "L", 10 to "X", 5 to "V", 1 to "I")
+    private val numerals = mapOf(
+        1000 to "M",
+        500 to "D",
+        100 to "C",
+        50 to "L",
+        10 to "X",
+        5 to "V",
+        1 to "I"
+    )
 
     fun convert(number: Int): String {
         var count = number

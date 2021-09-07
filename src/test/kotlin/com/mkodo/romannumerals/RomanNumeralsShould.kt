@@ -30,9 +30,18 @@ class RomanNumeralsShould {
     }
 
     @Test
-    fun `convert units of 100`(){
+    fun `convert units of 100`() {
         assertEquals("C", romanNumerals.convert(100))
         assertEquals("CC", romanNumerals.convert(200))
         assertEquals("CCCLXXVIII", romanNumerals.convert(378))
+        assertEquals("D", romanNumerals.convert(500))
+        assertEquals("DC", romanNumerals.convert(600))
+    }
+
+    @Test
+    fun `convert units of 1000`(){
+        assertEquals("M", romanNumerals.convert(1000))
+        assertEquals("MM", romanNumerals.convert(2000))
+        assertEquals("MMXXI", romanNumerals.convert(2021))
     }
 }
