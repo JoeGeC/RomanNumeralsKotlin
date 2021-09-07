@@ -2,13 +2,13 @@ package com.mkodo.romannumerals
 
 class RomanNumerals {
     fun convert(number: Int): String {
-
-        if (number == 5) {
-            return "V"
-        }
-
+        var count = number
         var result = ""
-        for (i in 1..number) result += "I"
+        if (count >= 5) {
+            result += "V"
+            count -= 5
+        }
+        for (i in 1..count) result += "I"
         return result
     }
 }
