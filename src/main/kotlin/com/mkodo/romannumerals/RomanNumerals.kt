@@ -3,8 +3,13 @@ package com.mkodo.romannumerals
 class RomanNumerals {
     fun convert(number: Int): String {
         var count = number
-        if(count == 10) return "X"
         var result = ""
+
+        if (count >= 10) {
+            result += "X"
+            count -= 10
+        }
+
         if (count >= 5) {
             result += "V"
             count -= 5
