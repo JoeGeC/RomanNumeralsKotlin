@@ -20,4 +20,9 @@ class RomanNumeralsShould {
     fun `Convert 3 to III`() {
         assertEquals("III", romanNumerals.convert(3))
     }
+
+    @Test
+    fun `Convert 5 to V`() {
+        assertEquals("V", romanNumerals.convert(5))
+    }
 }
