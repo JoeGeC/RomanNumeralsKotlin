@@ -44,4 +44,14 @@ class RomanNumeralsShould {
         assertEquals("MM", romanNumerals.convert(2000))
         assertEquals("MMXXI", romanNumerals.convert(2021))
     }
+
+    @Test
+    fun `convert 4s and 9s`(){
+        assertEquals("IV", romanNumerals.convert(4))
+        assertEquals("IX", romanNumerals.convert(9))
+        assertEquals("XL", romanNumerals.convert(40))
+        assertEquals("XC", romanNumerals.convert(90))
+        assertEquals("CD", romanNumerals.convert(400))
+        assertEquals("CM", romanNumerals.convert(900))
+    }
 }
