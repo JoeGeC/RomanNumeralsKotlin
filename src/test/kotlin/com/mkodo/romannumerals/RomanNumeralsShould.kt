@@ -25,5 +25,14 @@ class RomanNumeralsShould {
         assertEquals("XXX", romanNumerals.convert(30))
         assertEquals("XXXVIII", romanNumerals.convert(38))
         assertEquals("L", romanNumerals.convert(50))
+        assertEquals("LX", romanNumerals.convert(60))
+        assertEquals("LXXVI", romanNumerals.convert(76))
+    }
+
+    @Test
+    fun `convert units of 100`(){
+        assertEquals("C", romanNumerals.convert(100))
+        assertEquals("CC", romanNumerals.convert(200))
+        assertEquals("CCCLXXVIII", romanNumerals.convert(378))
     }
 }
