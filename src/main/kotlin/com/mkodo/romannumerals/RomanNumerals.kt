@@ -1,24 +1,21 @@
 package com.mkodo.romannumerals
 
 class RomanNumerals {
+    private val numerals = mapOf(50 to "L", 10 to "X", 5 to "V", 1 to "I")
+
     fun convert(number: Int): String {
         var count = number
         var result = ""
-
-        arrayOf(50, 10, 5, 1).forEach {
+        numerals.keys.forEach {
             while (count >= it) {
                 result += numeralFor(it)
                 count -= it
             }
         }
-
         return result
     }
 
     private fun numeralFor(i: Int): String {
-        if (i == 50) return "L"
-        if (i == 10) return "X"
-        if (i == 5) return "V"
-        return "I"
+        return numerals[i] ?: ""
     }
 }
