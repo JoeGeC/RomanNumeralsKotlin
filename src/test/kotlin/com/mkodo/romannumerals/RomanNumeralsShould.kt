@@ -22,6 +22,8 @@ class RomanNumeralsShould {
         assertEquals("XI", romanNumerals.convert(11))
         assertEquals("XV", romanNumerals.convert(15))
         assertEquals("XX", romanNumerals.convert(20))
+        assertEquals("XXX", romanNumerals.convert(30))
+        assertEquals("XXXVIII", romanNumerals.convert(38))
+        assertEquals("L", romanNumerals.convert(50))
     }
-
 }
