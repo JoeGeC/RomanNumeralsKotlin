@@ -5,19 +5,11 @@ class RomanNumerals {
         var count = number
         var result = ""
 
-        while (count >= 10) {
-            result += numeralFor(10)
-            count -= 10
-        }
-
-        while (count >= 5) {
-            result += numeralFor(5)
-            count -= 5
-        }
-
-        while (count >= 1) {
-            result += numeralFor(1)
-            count -= 1
+        arrayOf(10, 5, 1).forEach {
+            while (count >= it) {
+                result += numeralFor(it)
+                count -= it
+            }
         }
 
         return result
