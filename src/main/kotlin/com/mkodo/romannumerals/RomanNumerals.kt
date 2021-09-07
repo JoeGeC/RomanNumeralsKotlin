@@ -2,6 +2,8 @@ package com.mkodo.romannumerals
 
 class RomanNumerals {
     fun convert(number: Int): String {
-        return "I"
+        if(number == 1)
+            return "I"
+        return "II"
     }
 }
