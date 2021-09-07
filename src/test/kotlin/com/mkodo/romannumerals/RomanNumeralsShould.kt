@@ -54,4 +54,19 @@ class RomanNumeralsShould {
         assertEquals("CD", romanNumerals.convert(400))
         assertEquals("CM", romanNumerals.convert(900))
     }
+
+    @Test
+    fun `should convert customer examples`() {
+        assertEquals("XXIX", romanNumerals.convert(29))
+        assertEquals("LXXX", romanNumerals.convert(80))
+        assertEquals("CCXCIV", romanNumerals.convert(294))
+        assertEquals("MMXIX", romanNumerals.convert(2019))
+    }
+
+    @Test
+    fun `show all the numbers ever that the Romans knew`() {
+        for (i in 1..2022) {
+            print(romanNumerals.convert(i) + "\n")
+        }
+    }
 }
